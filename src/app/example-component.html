@@ -1,0 +1,13 @@
+<h2>
+  angular 9 async test
+</h2>
+
+<div *ngIf="obs$ | async as val; else loading">
+  val = {{ val.prop  }}
+</div>
+<ng-template #loading>
+  <div>
+    loading..
+  </div>
+  >
+</ng-template>
