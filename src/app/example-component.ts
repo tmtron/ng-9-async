@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import { of } from 'rxjs';
+import {delay} from "rxjs/operators";
 
 @Component({
   selector: 'example-component',
@@ -10,6 +11,6 @@ export class ExampleComponent {
 
   obs$ = of({
     prop: 12
-  });
+  }).pipe(delay(1000));
 
 }
